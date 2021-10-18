@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  h2 JSON API Example - Reddit Feed
+  hr
+
+  for url in urls
+    if url.format == 'gif'
+      video(preload="auto", autoplay="autoplay", loop="loop", height="300px")
+        source(src=url.url, type="video/mp4")
+    else if url.format == 'image'
+      img(src=url.url, height="300px")
+    hr
